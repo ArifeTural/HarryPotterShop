@@ -1,3 +1,32 @@
-body {
-  margin: 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .loginDiv{
+        background-image: url(./assets/loginWallpaper.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
+        @apply flex justify-center items-center min-h-screen
+    }
+
+    .logginn{
+        background-color: #031230ab;
+    }
+
+    .login-input{
+        height: 44px;
+        border-radius:5px ;
+        border: 2px solid black;
+        padding: .6rem;
+        @apply focus:outline-main focus:caret-main;
+        
+}
+   .login-input::placeholder{
+    color:cdcdcd;
+    @apply font-montserrat text-[12px] font-[400];
+
+   }
 }
