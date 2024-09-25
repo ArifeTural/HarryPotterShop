@@ -10,6 +10,7 @@
         background-position: center;
         background-size: cover; 
         @apply flex justify-center items-center min-h-screen
+        
     }
 
     .logginn{
@@ -29,4 +30,6 @@
     @apply font-montserrat text-[12px] font-[400];
 
    }
+
+   
 }

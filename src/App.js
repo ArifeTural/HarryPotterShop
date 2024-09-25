@@ -1,10 +1,13 @@
-import Login from "./pages/Login";
+import AppRouter from "./router/AppRouter";
+
 
 function App() {
   return (
-    <div className="App">
-     <Login/>
-    </div>
+  <div>
+    <AppRouter/>
+  </div>
+  
+
   );
 }
 
