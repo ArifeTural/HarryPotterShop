@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
 import logo from "../assets/magic-297332_1280.webp";
 import { closeNavbar, logoutIcon, openNavbar } from "../helper/icons";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation} from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
+
 const navigation = [
   {
     title: "Home",
@@ -13,13 +14,14 @@ const navigation = [
     path: "/dashboard/products",
   },
   {
-    title: "About",
+    title: "Books",
     path: "/dashboard/about",
   },
 ];
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const location = useLocation();
+  const {logout} = useContext(AuthContext)
 
   // console.log(location);
   return (
@@ -71,6 +73,12 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <div className="flex-1 item-center justify-end text-white gap-x-6 mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
+            <NavLink className="flex items-center justify-center gap-x-1 py-2 px-4 font-medium text-red-800 hover:text-white rounded-full md:inline-flex">
+            Logout {logoutIcon}
+
+            </NavLink>
+          </div>
      
         </div>
       </div>

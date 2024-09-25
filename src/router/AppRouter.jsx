@@ -10,7 +10,8 @@ import Navbar from '../components/Navbar';
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    //!BrowserRouter index.js de sebebi AuthProvider içinde react-router-doma ait yapıları kullanabilek.
+    <>
     <Navbar/>
     <Routes>
    <Route path="/" element={<Login/>} />
@@ -19,7 +20,7 @@ const AppRouter = () => {
    <Route path="/about" element={<About/>} />
    <Route path="*" element={<NotFound/>} />
     </Routes>
-   </BrowserRouter>
+   </>
   )
 }
 
