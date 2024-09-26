@@ -74,7 +74,9 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="flex-1 item-center justify-end text-white gap-x-6 mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-            <NavLink className="flex items-center justify-center gap-x-1 py-2 px-4 font-medium text-red-800 hover:text-white rounded-full md:inline-flex">
+            <NavLink 
+            onClick={logout}
+            className="flex items-center justify-center gap-x-1 py-2 px-4 font-medium text-red-800 hover:text-white rounded-full md:inline-flex">
             Logout {logoutIcon}
 
             </NavLink>
