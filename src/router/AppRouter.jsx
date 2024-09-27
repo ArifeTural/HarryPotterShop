@@ -20,7 +20,7 @@ const AppRouter = () => {
         <Route path="/dashboard" element={<PrivateRouter />}>
           <Route path="/dashboard" element={<Home />} />
           <Route path="/dashboard/products" element={<Product/>} />
-          <Route path="/dashboard/products/:id" element={<ProductDetail />} />
+          {/* <Route path="/dashboard/products/:id" element={<ProductDetail />} /> */}
           {/* //* Absolute path */}
           <Route path="/dashboard/about" element={<About />} />
           {/* //* relative path */}

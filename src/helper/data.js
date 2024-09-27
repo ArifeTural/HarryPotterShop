@@ -3,7 +3,7 @@ export const data = [
       id: 1,
       title: "Hogwarts Kar Küresi",
       category:"accessory",
-      image: "../",
+      image:"/img/HogwartsKarKuresi699.png",
       price:699.99,
      
     },
@@ -11,7 +11,7 @@ export const data = [
       id: 2,
       title: "Tasarım Kupa",
       category:"accessory",
-      image:"./images/gozluksimsektasarimliKupa229.webp",
+      image:"/img/gozluksimsektasarimliKupa229.png",
       price:299.99,
      
     },
@@ -19,7 +19,7 @@ export const data = [
       id: 3,
       title: "Harry Potter Kitapları Seti",
       category:"books",
-      image:"./images/kitapSeti1735.webp",
+      image:"/img/kitapSeti1735.png",
       price:1734.99,
      
     },
@@ -27,7 +27,7 @@ export const data = [
       id: 4,
       title: "Seçmen Şapka",
       category:"accessory",
-      image:"./images/secmensapka499.webp",
+      image:"/img/secmensapka499.png",
       price:499.99,
      
     },
@@ -35,7 +35,7 @@ export const data = [
       id: 5,
       title: "Çizgili Defter",
       category:"books",
-      image:"./images/Deftercizgili149.webp",
+      image:"/img/Deftercizgili149.png",
       price:149.99,
      
     },
@@ -43,7 +43,7 @@ export const data = [
       id: 6,
       title: "Tek Kişilik Nevresim Takımı",
       category:"accessory",
-      image:"./images/MagicSquadTekNevresim1258.webp",
+      image:"/img/MagicSquadTekNevresim1258.png",
       price:1249.99,
      
     },
@@ -51,7 +51,7 @@ export const data = [
       id: 7,
       title: "Sweatshirt ",
       category:"clothes",
-      image:"./images/Sweatshirt699.webp",
+      image:"/img/Sweatshirt699.png",
       price:699.99,
      
     },
@@ -59,7 +59,7 @@ export const data = [
       id: 8,
       title: "Fosforlu Kalem",
       category:"books",
-      image:"./images/fosforlukalem216.webp",
+      image:"/img/fosforlukalem216.png",
       price:214.99,
      
     },
@@ -67,7 +67,7 @@ export const data = [
       id: 9,
       title: "Kapı Önü Paspası",
       category:"accessory",
-      image:"./images/paspas349.webp",
+      image:"/img/paspas349.png",
       price:349.99,
      
     },
@@ -75,7 +75,7 @@ export const data = [
       id: 10,
       title: "Baskılı Çorap Seti",
       category:"clothes",
-      image:"./images/corapSeti269.webp",
+      image:"/img/corapSeti269.png",
       price:269.99,
      
     },
@@ -83,7 +83,7 @@ export const data = [
       id: 11,
       title: "Özel Kutulu Metal Asa Seti",
       category:"accessory",
-      image:"./images/ozelKutuluMetalAsaSeti1500.webp",
+      image:"/img/ozelKutuluMetalAsaSeti1500.png",
       price:1499.99,
      
     },
@@ -91,7 +91,7 @@ export const data = [
       id: 12,
       title: "Baskılı Telefon Kılıfı",
       category:"accessory",
-      image:"./images/telefonkilifi279.webp",
+      image:"/img/telefonkilifi279.png",
       price:279.99,
      
     },
@@ -99,7 +99,7 @@ export const data = [
       id: 13,
       title: "Harry Potter Yemek Kitabı",
       category:"books",
-      image:"./images/harryPotterYemekKitabi280.webp",
+      image:"/img/harryPotterYemekKitabi280.png",
       price:299.99,
      
     },
@@ -107,7 +107,7 @@ export const data = [
       id: 14,
       title: "Baskılı Beyaz Tişört",
       category:"clothes",
-      image:"./images/beyazTisort230.webp",
+      image:"/img/beyazTisort230.png",
       price:229.99,
      
     },
@@ -115,7 +115,7 @@ export const data = [
       id: 15,
       title: "Hogwarts Kar Küresi",
       category:"accessory",
-      image:"./images/Kupa330mlLacivert300.webp",
+      image:"/img/Kupa330mlLacivert300.png",
       price:299.99,
      
     },
