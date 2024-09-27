@@ -3,7 +3,7 @@ export const data = [
       id: 1,
       title: "Hogwarts Kar Küresi",
       category:"accessory",
-      image:"./images/HogwartsKarKuresi699.webp",
+      image: "../",
       price:699.99,
      
     },
