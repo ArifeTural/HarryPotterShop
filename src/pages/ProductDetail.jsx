@@ -4,13 +4,13 @@ import { data } from "../helper/data"; // Data'nın doğru import edildiğinden 
 
 const ProductDetail = () => {
   const navigate = useNavigate();
-  const [state, setState] = useState(null); // Başlangıçta state null olabilir
+  const [state, setState] = useState(null);
   const { id } = useParams();
 
   const getDetailData = () => {
     try {
-      const productDetail = data.find((product) => product.id === parseInt(id)); // ID'ye göre ürünü bul
-      setState(productDetail); // Bulunan ürünü state'e ata
+      const productDetail = data.find((product) => product.id === parseInt(id)); 
+      setState(productDetail); 
     } catch (error) {
       console.log(error);
     }
@@ -20,9 +20,9 @@ const ProductDetail = () => {
     getDetailData();
   }, []);
 
-  if (!state) return <div>Loading...</div>; // State henüz gelmediyse bir yükleniyor mesajı göster
+  if (!state) return <div>Loading...</div>;
 
-  const {  title, description, category, price, image,images } = state; // Doğru state'i kullan
+  const {  title, description, category, price, image,images } = state; 
 
   return (
     <div className="mx-auto max-w-2xl px-4 pt-8 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
