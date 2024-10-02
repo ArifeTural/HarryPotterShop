@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ProductCard from '../components/ProductCard';
 import { data } from "../helper/data";
 import Form from "react-bootstrap/Form";
+import ProductDetail from './ProductDetail';
 
 
 
@@ -27,7 +28,9 @@ const Product = () => {
    
         {data.filter((products)=>
         products.title.toLowerCase().includes(search.trim().toLowerCase())).map((products)=>(
-          <ProductCard key={products.id} products={products} />
+          <ProductCard key={products.id} products={products}
+          />
+          
         ))
         }
       </div>
