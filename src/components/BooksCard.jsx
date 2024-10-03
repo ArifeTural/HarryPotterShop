@@ -1,24 +1,37 @@
-import React from "react";
+import React, { useState } from 'react';
+import { Col, Card } from 'react-bootstrap';
 
-const BooksCard = () => {
+
+
+const BooksCard = ({ kitap }) => {
+  const [show, setShow] = useState(true);
+
   return (
-    <div className="cursor-pointer">
-      <div className="w-full rounded-md bg-gray-200 hover:opacity-75 lg:h-80">
-        <img
-          src={"images"}
-          alt=""
-          title={"title"}
-          className="h-[200px] w-full object-fit lg:h-full lg:w-full"
-        />
-      </div>
-      <div className="mt-4 flex justify-between">
-        <div className="flex-1">
-          <h3 className="text-sm text-gray-700 line-clamp-1">title</h3>
-          <p className="mt-1 text-sm text-gray-500 line-clamp-1">category</p>
-        </div>
-      </div>
-    </div>
+    <Col xs={10} sm={8} md={6} lg={4} className='genel' >
+      <Card className='' onClick={() => setShow(!show)} role="button">
+        {show ? (
+          <Card.Img
+            variant='top'
+            title={kitap.name}
+            src={kitap.image}
+          />
+         
+        ) : (
+          <>
+            <Card.Header>
+              <Card.Title>{kitap.name}</Card.Title>
+            </Card.Header>
+            <ul className='m-auto ps-0'>
+              {kitap.bilgi.map((item, index) => (
+                <li key={index}className="list-unstyled  text-start"> <br/>  {item} </li>
+              ))}
+            </ul>
+         
+          </>
+        )}
+      </Card>
+    </Col>
   );
-};
+}
 
 export default BooksCard;
