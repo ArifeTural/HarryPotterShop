@@ -9,18 +9,17 @@ const Product = () => {
   const [loading, setLoading] = useState(true); // Loading durumu
 
   useEffect(() => {
-    // Simüle edilen bir veri yükleme süresi
+   
     const timer = setTimeout(() => {
-      setLoading(false); // Yükleme tamamlandığında loading'i false yap
-    }, 500); // 500 ms sonra loading durumu değişecek
-
-    return () => clearTimeout(timer); // Temizlik işlemi
+      setLoading(false); 
+    }, 500); 
+    return () => clearTimeout(timer); 
   }, []);
 
   if (loading) {
     return <div>
       <img  className='w-[300px] h-[300px] mx-auto ' src="https://cdn.pixabay.com/animation/2023/11/30/10/11/10-11-02-622_512.gif" alt="" />
-    </div>; // Yükleme durumu
+    </div>;
   }
 
   return (
