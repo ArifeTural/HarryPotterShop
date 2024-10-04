@@ -1,36 +1,34 @@
-import React, { useState } from 'react';
-import { Col, Card } from 'react-bootstrap';
+import React from 'react';
+import { useState } from 'react';
+import Card from 'react-bootstrap/Card';
 
-
-
-const BooksCard = ({ kitap }) => {
-  const [show, setShow] = useState(true);
+const BooksCard = ({ name, image, bilgi, link }) => {
+  const[show,setShow]=useState(true)
+  const handleClick=()=>setShow(!show)
+  console.log(show);
 
   return (
-    <Col xs={10} sm={8} md={6} lg={4} className='genel' >
-      <Card className='' onClick={() => setShow(!show)} role="button">
-        {show ? (
-          <Card.Img
-            variant='top'
-            title={kitap.name}
-            src={kitap.image}
-          />
-         
-        ) : (
-          <>
-            <Card.Header>
-              <Card.Title>{kitap.name}</Card.Title>
-            </Card.Header>
-            <ul className='m-auto ps-0'>
-              {kitap.bilgi.map((item, index) => (
-                <li key={index}className="list-unstyled  text-start"> <br/>  {item} </li>
-              ))}
-            </ul>
-         
-          </>
+    <Card className='cardStyle' role='button' onClick={handleClick}>
+    {show ? (    
+        <Card.Img variant="top" src={image} /> 
+    ) : (
+        <ul >
+            {bilgi.map((item)=>(
+                <li>🏀 {item}</li>
+            ))}
+        </ul>
         )}
-      </Card>
-    </Col>
+   
+     
+
+        <Card.Footer>
+        <Card.Title>
+        {name}
+        </Card.Title>
+    
+        </Card.Footer>
+        
+    </Card>
   );
 }
 
