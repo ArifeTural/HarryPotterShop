@@ -1,35 +1,30 @@
-import React from 'react';
-import { useState } from 'react';
-import Card from 'react-bootstrap/Card';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const BooksCard = ({ name, image, bilgi, link }) => {
-  const[show,setShow]=useState(true)
-  const handleClick=()=>setShow(!show)
-  console.log(show);
 
-  return (
-    <Card className='cardStyle' role='button' onClick={handleClick}>
-    {show ? (    
-        <Card.Img variant="top" src={image} /> 
-    ) : (
-        <ul >
-            {bilgi.map((item)=>(
-                <li>🏀 {item}</li>
-            ))}
-        </ul>
-        )}
+const BooksCard = ({name, image}) => {
    
-     
-
-        <Card.Footer>
-        <Card.Title>
-        {name}
-        </Card.Title>
-    
-        </Card.Footer>
-        
-    </Card>
+    const navigate = useNavigate();
+  return (
+    <div className="cursor-pointer"
+    onClick={()=>navigate(`${id}`, {state:kitapp})}>
+      <div className="w-full rounded-md bg-gray-200 hover:opacity-75 lg:h-80">
+        <img
+          src={image}
+          alt=""
+          className=" w-full object-fit lg:h-full lg:w-full"
+        />
+      </div>
+  
+      <div className="mt-4 flex justify-between">
+        <div className="flex-1">
+          <h3 className="text-sm text-gray-700 line-clamp-1">{name}</h3>
+       
+        </div>
+       
+      </div>
+    </div>
   );
-}
+};
 
 export default BooksCard;
