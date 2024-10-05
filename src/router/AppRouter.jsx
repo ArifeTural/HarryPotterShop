@@ -9,6 +9,7 @@ import PrivateRouter from "./PrivateRouter";
 import ProductDetail from "../pages/ProductDetail";
 
 import About from "../pages/About";
+import AboutDetail from "../pages/AboutDetail";
 
 
 const AppRouter = () => {
@@ -24,6 +25,7 @@ const AppRouter = () => {
           <Route path="/dashboard/products" element={<Product/>} />
           <Route path="/dashboard/products/:id" element={<ProductDetail />} />
           <Route path="/dashboard/about" element={<About />} />
+          <Route path="/dashboard/about/:id" element={<AboutDetail />} />
          
         </Route>
         <Route path="*" element={<NotFound />} />

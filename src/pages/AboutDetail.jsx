@@ -1,30 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { data } from "../helper/data"; 
+import { kitap } from "../helper/data";
 
-const ProductDetail = () => {
+const AboutDetail = () => {
   const navigate = useNavigate();
   const [state, setState] = useState(null);
   const { id } = useParams();
 
-  const getDetailData = () => {
+  const getDetailKtp = () => {
     try {
-      const productDetail = data.find((product) => product.id === parseInt(id)); 
-      setState(productDetail); 
+      const aboutDetail = kitap.find((kitap) => kitap.id === parseInt(id)); 
+      setState(aboutDetail); 
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    getDetailData();
+    getDetailKtp();
   }, []);
 
-  if (!state) return <div>
-   
-  </div>;
+  if (!state) return <div>Loading...</div>;
 
-  const {  title, description, category, price, image,images } = state; 
+  const {  image, name, bilgi, link } = state; 
 
   return (
     <div className="mx-auto max-w-2xl px-4 pt-8 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -35,35 +33,18 @@ const ProductDetail = () => {
               <img
                 className="h-full w-full rounded-lg"
                 src={image}
-                alt={title}
+                alt=""
               />
             </div>
-            <div className="grid grid-cols-3 gap-4 row-span-1">
-              {images?.slice(0, 3).map((item, i) => (
-                <div key={i}>
-                  <img
-                    className="h-[15vh] w-full rounded-lg"
-                    src={item}
-                    alt=""
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
+         
           </div>
           <div className="w-full lg:w-5/12 flex flex-col justify-evenly p-4">
             <div className="pt-3 ml-4 mr-2 mb-3">
-              <h3 className="text-xl text-gray-900">{title}</h3>
-              <p className="text-gray-400 mt-1">{description}</p>
+              <h3 className="text-xl text-gray-900">{name}</h3>
+              <p className="text-gray-500 mt-1">{bilgi}</p>
+             <a href={link} target="blank">özetin devamı..</a>
             </div>
-            <div className="flex mt-2 pt-3 ml-4 mr-2">
-              <div className="">
-                <span className="block text-gray-900">
-                  Category: {category}
-                </span>
-                <span className="block text-sm">Price: {price}$</span>
-              </div>
-            </div>
+            
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => navigate(-1)}
@@ -85,4 +66,4 @@ const ProductDetail = () => {
   );
 };
 
-export default ProductDetail;
+export default AboutDetail;

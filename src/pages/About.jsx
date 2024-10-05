@@ -13,13 +13,13 @@ const About = () => {
      
       const timer = setTimeout(() => {
         setLoading(false); 
-      }, 500); 
+      }, 600); 
       return () => clearTimeout(timer); 
     }, []);
   
     if (loading) {
       return <div>
-        loading..
+         <img  className='w-[300px] h-[300px] mx-auto ' src="https://cdn.pixabay.com/animation/2023/10/02/18/06/18-06-24-613_512.gif" alt="" />
       </div>;
     }
   
@@ -36,7 +36,7 @@ const About = () => {
           {kitap.filter((kitapp) =>
             kitapp.name.toLowerCase().includes(search.trim().toLowerCase())
           ).map((kitapp) => (
-            <BooksCard key={kitapp.id} {...kitapp} />
+            <BooksCard key={kitapp.id} kitapp={kitapp} />
           ))}
         </div>
       </div>

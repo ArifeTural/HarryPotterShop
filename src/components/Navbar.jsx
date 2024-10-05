@@ -6,15 +6,15 @@ import { AuthContext } from "../context/AuthProvider";
 
 const navigation = [
   {
-    title: "Home",
+    title: "Anasayfa",
     path: "/dashboard",
   },
   {
-    title: "Products",
+    title: "Ürünler",
     path: "/dashboard/products",
   },
   {
-    title: "Books",
+    title: "Kitaplar",
     path: "/dashboard/about",
   },
 ];
@@ -35,7 +35,7 @@ const Navbar = () => {
           >
             <img src={logo} alt="wikipedia" width={70} height={70} />
             <span className="text-white hover:text-red-900 font-medium">
-            The World of Harry Potter
+            Harry Potter Dünyası
             </span>
           </a>
           {/* //* icon md ekranlardan sonra gizlensin diyoruz */}
@@ -77,7 +77,7 @@ const Navbar = () => {
             <NavLink 
             onClick={logout}
             className="flex items-center justify-center gap-x-1 py-2 px-4 font-medium text-red-800 hover:text-white rounded-full md:inline-flex">
-            Logout {logoutIcon}
+            ÇIKIŞ {logoutIcon}
 
             </NavLink>
           </div>

@@ -28,8 +28,8 @@ const Login = () => {
         </div>
 
         <div className='my-2'>
-            <h3 className=' font-montserrat font-[600] text-[22px]  text-white '> SIGN IN</h3>
-            <p className='text-labelColor text-label mt-1'>Enter your credetentials to access your account</p>
+            <h3 className=' font-montserrat font-[600] text-[22px]  text-white '>   GİRİŞ</h3>
+            <p className='text-labelColor text-label mt-1'>Hesabınıza erişmek için kimlik bilgilerinizi girin</p>
         </div>
         <form 
         onSubmit={handleSubmit}
@@ -49,7 +49,7 @@ const Login = () => {
             </div>
             <div className='flex flex-col gap-2'>
                 <label className="font-montserrat text-label hover:after:content-['harry'] hover:after:pl-3 hover:after:underline hover:cursor-pointer  text-white " htmlFor="password">
-                Password
+                Şifre
                 </label>
                 <input 
                 className='login-input'
@@ -61,10 +61,10 @@ const Login = () => {
                 />
             </div>
 
-            <button className='bg-main h-[40px] font-montserrat text-label uppercase hover:opacity-90 rounded-[4px] text-white'>Sing In</button>
+            <button className='bg-main h-[40px] font-montserrat text-label uppercase hover:opacity-90 rounded-[4px] text-white'>Giriş</button>
         <div className='flex justify-center items-center flex-wrap gap-2 mt-3'>
-            <span className='text-label font-mono font-[500] cursor-pointer  text-white'>Forgot your password?</span>
-            <span className='text-main text-[14px] font-montserrat font-[500] underline ml-3 cursor-pointer ' >Reset password</span>
+            <span className='text-label font-mono font-[500] cursor-pointer  text-white'>Şifremi unuttum?</span>
+            <span className='text-main text-[14px] font-montserrat font-[500] underline ml-3 cursor-pointer ' >Şifremi yenile</span>
         
         </div>
 
