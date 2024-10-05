@@ -29,10 +29,10 @@ const About = () => {
           type="search"
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Ürün arama.."
-          className="w-[75%] h-[50px] font-montserrat hover:cursor-pointer text-[20px] text-main font-[600] "
+          className="w-[75%] h-[50px] font-montserrat  border-4 mb-6 rounded-full hover:border-amber-700  hover:cursor-pointer text-[20px] text-main font-[600] "
         />
   
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 xl:gap-x-8'>
+        <div className='book-genel'>
           {kitap.filter((kitapp) =>
             kitapp.name.toLowerCase().includes(search.trim().toLowerCase())
           ).map((kitapp) => (

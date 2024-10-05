@@ -40,9 +40,9 @@ const AboutDetail = () => {
           </div>
           <div className="w-full lg:w-5/12 flex flex-col justify-evenly p-4">
             <div className="pt-3 ml-4 mr-2 mb-3">
-              <h3 className="text-xl text-gray-900">{name}</h3>
-              <p className="text-gray-500 mt-1">{bilgi}</p>
-             <a href={link} target="blank">özetin devamı..</a>
+              <h3 className=" text-red-900 text-4xl">{name}</h3>
+              <p className="text-gray-500 mt-1 text-justify">{bilgi}</p>
+             <a href={link} target="blank" className="text-red-800 underline text-xl">özetin devamı..</a>
             </div>
             
             <div className="flex justify-end gap-3 mt-4">

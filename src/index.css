@@ -33,3 +33,31 @@
 
    
 }
+
+.book-genel{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    border: 10px solid #082d50;
+    background: #082d50;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+
+.book-div{
+   
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.book-img{
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+
+}
